@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Port {
+    private int portId;
+    private static int lastId;
     private int maxShips;
     private Ship[] shipsAtDocs;
     private int lastShip = 0;
@@ -14,6 +16,7 @@ public class Port {
         this.maxShips = maxShips;
         this.shipsAtDocs = new Ship[this.maxShips];
         this.passengers = new ArrayList<>();
+        this.portId = ++lastId;
     }
 
     public Ship getShipsAtDocs(int index) {

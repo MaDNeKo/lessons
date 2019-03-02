@@ -18,11 +18,17 @@ public class Shipyard extends Port {
             return;
         }
         if (shipType.equals("Ark")) {
-            this.buildShips[lastShip] = new Ark(displacement, numOfSeats);
+            Scanner in = new Scanner(System.in);
+            System.out.print("Палуб: ");
+            int numOfDecks = in.nextInt();
+            this.buildShips[lastShip] = new Ark(displacement, numOfSeats, numOfDecks);
             lastShip++;
         }
         else if (shipType.equals("Boat")) {
-            this.buildShips[lastShip] = new Boat(displacement, numOfSeats);
+            Scanner in = new Scanner(System.in);
+            System.out.print("Количество вёсел: ");
+            int numOfOars = in.nextInt();
+            this.buildShips[lastShip] = new Boat(displacement, numOfSeats, numOfOars);
             lastShip++;
         }
         else if (shipType.equals("Sailboat")) {
