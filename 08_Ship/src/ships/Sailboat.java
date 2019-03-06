@@ -2,7 +2,7 @@ package ships;
 
 public class Sailboat extends Ship {
     private String shipClass = "Парусник";
-    private int mast;
+    private int mast; //почему не numOfMust
 
     public Sailboat(int displacement, int numOfSeats, int mast) {
         super(displacement, numOfSeats);

@@ -13,6 +13,7 @@ public class Ship {
     private static int lastId = 0;
     private Port currPort;
 
+    //почему не в конструкторе?
     public void setShipClass(String shipClass) {
         this.shipClass = shipClass;
     }
@@ -37,11 +38,36 @@ public class Ship {
         this.shipId = ++lastId;
     }
 
+    //есть разные layout-ы классов
+    //
+    //объявления внутренних классов
+    //публичные константы
+    //непубличные константы
+    //все поля что ниже, но статические
+    //приватные поля
+    //протектед поля
+    //публинчые поля
+    //конструкторы
+    //геттеры
+    //сеттеры
+    //приватные методы
+    //протектед методы
+    //публичные методы
+    //(причем по возможности служебные методы
+    //выше тех, кто их использует)
+    //переоперделение методов базового класса
+    //переопределение методов Object
+
+    //переместить вниз метода
+    //и навесить @Override
     public String toString() {
         return "Тип корабля: " + shipClass + "\n Ship id: " + this.shipId + "\n Водоизмещение " + this.displacement +
                 "\n Число мест " + this.numOfSeats;
     }
 
+    //рекомендую не ставить зисы, кроме как в конструторе
+    //и вообще мода меняется
+    //в 17 студии нерекомендую ставить зисы везде где можно не ставить
     public boolean addHuman(Human someHuman) {
         if (this.freeSeats == 0) {
             System.out.println("Мест нет корбаль не может приянть больше");
@@ -53,5 +79,4 @@ public class Ship {
             return true;
         }
     }
-
 }

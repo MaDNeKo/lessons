@@ -11,5 +11,4 @@ public class Passenger extends Human {
     public String toString() {
         return super.toString() + " билет №" + this.ticketNum;
     }
-
 }

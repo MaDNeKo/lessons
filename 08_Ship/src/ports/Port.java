@@ -7,11 +7,11 @@ import java.util.List;
 
 public class Port {
     private int portId;
-    private static int lastId;
+    private static int lastId; //часто называют unic и подумайте над _uniqueID
     private int maxShips;
     private Ship[] shipsAtDocs;
     private int lastShip = 0;
-    private List<Passenger> passengers;
+    private List<Passenger> passengers; //порт знает только про корабли
     public Port (int maxShips) {
         this.maxShips = maxShips;
         this.shipsAtDocs = new Ship[this.maxShips];
@@ -35,6 +35,7 @@ public class Port {
         return passengers;
     }
 
+    // надо дать возможность узнать забит ли порт
     public void addShip (Ship newShip) {
         if (lastShip < this.shipsAtDocs.length) {
             this.shipsAtDocs[lastShip] = newShip;

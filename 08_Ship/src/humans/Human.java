@@ -4,10 +4,10 @@ import ports.*;
 
 public class Human {
     private String name;
-    private Ship ship;
-    private Port port;
-    boolean intoPort = false;
-    boolean intoShip = false;
+    private Ship ship;//убрать шип
+    private Port port;//убрать порт
+    boolean intoPort = false; //убрать их
+    boolean intoShip = false; //private потерялся
 
     public Human (String name) {
         this.name = name;
