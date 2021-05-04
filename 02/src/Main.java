@@ -102,7 +102,7 @@ public class Main {
                         else System.out.println("Смотри мне-.-\nТогда мы продолжаем!");
                         break;
                     case "Надоело":
-                        System.out.println("Что же, пока! Надеюсь, потом ты пройдёшь мою анкету полностью!");
+                        System.out.println("Надеюсь, потом ты пройдёшь мою анкету полностью!\nПака!");
                         return;
                     default:
                         break;
